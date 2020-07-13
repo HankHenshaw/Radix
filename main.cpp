@@ -9,11 +9,13 @@ int main()
     tree.insert("romanusis");
     tree.insert("romane");
     tree.insert("romanus");
-//    tree.insert("omar");
-//    tree.insert("max");
-//    tree.insert("maxim");
-//    tree.insert("jackob");
-//    tree.insert("jack");
+
+   std::cout << tree.find("romanusus") << '\n';
+   std::cout << tree.find("romanusis") << '\n';
+   std::cout << tree.find("romane") << '\n';
+   std::cout << tree.find("romanus") << '\n';
+   std::cout << tree.find("roma") << '\n';
+   std::cout << tree.find("oma") << '\n';
 
     std::cout << "Done\n";
     return 0;

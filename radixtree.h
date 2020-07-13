@@ -1,5 +1,4 @@
-#ifndef RADIXTREE_H
-#define RADIXTREE_H
+#pragma once
 
 #include <string>
 #include <array>
@@ -13,7 +12,7 @@ public:
         static const int SIZE = 26;
         std::string label;
         bool isEnd;
-        std::array<std::unique_ptr<Node>, SIZE> child;
+        std::array<std::shared_ptr<Node>, SIZE> child;
     public:
         Node() : label(""), isEnd(false) {}
         Node(const std::string &str, bool val) : label(str),  isEnd(val) {}
@@ -24,8 +23,8 @@ private:
 public:
     RadixTree() : root(new Node) {};
     ~RadixTree() {delete root;}
-    bool insert(const std::string  &str);
-//    void insert(std::string &&str);
+    bool insert(const std::string &str);
+    bool find(const std::string &str);
+//    void remove(const std::string &str);
+    void print() const;
 };
-
-#endif // RADIXTREE_H
