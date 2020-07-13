@@ -4,7 +4,7 @@ if(NOT DEFINED ENV{TRAVIS_BUILD_NUMBER})
     set(ENV{TRAVIS_BUILD_NUMBER} 1)
 endif()
 
-project(radixtree)
+project(radixtree VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_executable(radix radixtree.h radixtree.cpp main.cpp)
 
